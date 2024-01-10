@@ -1,0 +1,75 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerPersonajes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40vw;
+    background-color: rgb(61, 61, 61);
+    box-shadow: 0px 3px 4px 0px #000000;
+} 
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: .2em;
+}
+
+.Especie {
+    margin-bottom: 1em;
+}
+
+.locacion {
+    margin-bottom: 1em;
+}
+
+strong {
+    color: gray;
+}
+
+button {
+    margin: 1em;
+    font-size: 1.5em;
+    padding: .3em;
+    background-color: transparent;
+    border: .9px solid gray;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(61, 61, 61);
+    color: #fff;
+}
+
+.ConatinerBtn {
+    display: flex;
+    flex-direction: row-reverse;
+}
