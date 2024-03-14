@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './Personajes.css'
 
 function Personajes() {
     const [Personajes, setPersonajes] = useState([])
@@ -33,23 +32,23 @@ function Personajes() {
     }
     
     return (
-        <main>
-            <div className="containerPersonajes">
+        <main className='flex flex-col items-center justify-center max-sm:p-0 max-sm:m-0'>
+            <div className="flex items-center justify-center flex-wrap gap-5 max-sm:flex-col max-sm:p-0 max-sm:m-0">
             {Personajes.map(personaje => (
-                <div key={personaje.id} className="card">
-                    <img src={personaje.image} alt={personaje.name} width={200} />
-                    <div className="content">
-                        <span className='name'>{personaje.name}</span>
-                        <span className='Especie'>Estado: {personaje.status} - Especie: {personaje.species}</span>
-                        <span className='locacion'> <strong>Locacion Actual:</strong> <br></br> {personaje.location.name}</span>
-                        <span> <strong>Lugar de Origen:</strong> <br></br> {personaje.origin.name}</span>
+                <div key={personaje.id} className="flex flex-row justify-center w-[40vw] bg-slate-900 shadow-lg max-sm:w-[95vw] max-sm:flex-col">
+                    <img src={personaje.image} alt={personaje.name} className='' />
+                    <div className="flex flex-col w-full p-[1em] text-white">
+                        <span className='text-[1.5em] font-bold mb-1'>{personaje.name}</span>
+                        <span className='mb-[1em]'>Estado: {personaje.status} - Especie: {personaje.species}</span>
+                        <span className='mb-[1em]'><strong className='text-gray-500'>Locacion Actual:</strong> <br></br> {personaje.location.name}</span>
+                        <span><strong className='text-gray-500'>Lugar de Origen:</strong> <br></br> {personaje.origin.name}</span>
                     </div>
                 </div>
             ))}
             </div>
-            <div className="ConatinerBtn">
-                <button onClick={() => handleNextPage()}>Siguiente</button>
-                {btnBack && <button onClick={() => handleBackPage()}>Regresar</button>}
+            <div className="flex flex-row-reverse">
+                <button className='m-[1em] text-2xl p-[.3em] border hover:bg-slate-900 hover:text-white' onClick={() => handleNextPage()}>Siguiente</button>
+                {btnBack && <button className='m-[1em] text-2xl p-[.3em] border hover:bg-slate-900 hover:text-white' onClick={() => handleBackPage()}>Regresar</button>}
             </div>
         </main>
     )  
